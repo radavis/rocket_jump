@@ -1,9 +1,21 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var fileMover = require('broccoli-file-mover');
+
+var vendorTree = fileMover('vendor', {
+  files: {
+    'ember-dev/index.js': 'ember/ember.js',
+    'ember-prod/index.js': 'ember/ember.prod.js'
+  }
+});
 
 var app = new EmberApp({
   name: require('./package.json').name,
+
+  trees: {
+    vendor: vendorTree
+  },
 
   // for some large projects, you may want to uncomment this (for now)
   es3Safe: true,

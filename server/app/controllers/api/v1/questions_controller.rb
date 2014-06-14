@@ -2,7 +2,9 @@ class Api::V1::QuestionsController < ApplicationController
   respond_to :json
 
   def index
-    render json: Question.limit(20)
+    @questions = Question.search(params[:search]).limit(20)
+
+    render json: @questions
   end
 
   def show

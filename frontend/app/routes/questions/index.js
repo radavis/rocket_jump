@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 var IndexRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('question');
+  queryParams: {
+    search: { refreshModel: true }
+  },
+
+  model: function(params) {
+    console.log(params);
+    return this.store.findQuery('question', params);
   }
 });
 

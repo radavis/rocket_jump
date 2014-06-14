@@ -6,6 +6,8 @@
     "qunit": "~1.12.0",
     "ember-qunit": "~0.1.5",
     "ember": "1.5.1",
+    "ember-dev": "http://builds.emberjs.com/canary/ember.js",
+    "ember-prod": "http://builds.emberjs.com/canary/ember.prod.js",
     "ember-data": "1.0.0-beta.8",
     "ember-resolver": "~0.1.1",
     "ic-ajax": "~1.x",
