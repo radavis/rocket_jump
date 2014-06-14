@@ -48,5 +48,4 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
-
 module.exports = app.toTree();
