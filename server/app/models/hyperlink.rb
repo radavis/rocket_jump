@@ -9,7 +9,7 @@ class Hyperlink < ActiveRecord::Base
       links = page.css('a')
 
       links.each do |link|
-        title = links.first.text
+        title = link.text
         url = link.attributes["href"].value
         Hyperlink.find_or_create_by(title: title, url: url)
       end
