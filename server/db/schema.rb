@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20140614182838) do
   enable_extension "plpgsql"
 
   create_table "hyperlinks", force: true do |t|
-    t.string   "url",        null: false
+    t.text     "url",        null: false
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "questions", force: true do |t|

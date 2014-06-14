@@ -8,3 +8,4 @@
 
 question_seeder = QuestionSeeder.new('lib/assets/help-requests.csv')
 question_seeder.seed!
+Hyperlink.seed_from_bookmarks
