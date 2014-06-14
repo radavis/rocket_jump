@@ -13,7 +13,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Server
+module RocketJump
   class Application < Rails::Application
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
