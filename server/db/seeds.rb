@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+question_seeder = QuestionSeeder.new('lib/assets/help-requests.csv')
+question_seeder.seed!
