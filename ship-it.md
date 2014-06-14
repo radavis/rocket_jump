@@ -8,9 +8,18 @@
  * Tag sites with keywords (javascript, ruby, html)
  * Search with no results -> put into a queue for someone to respond to with a relevant web site.
  * Webcrawling of approved domains
+ * Voting
+ * Approved Answer
+ * API search
 
 
 ### Searching:
-  KIS - SQL ILIKE statements
+ * KIS - SQL ILIKE statements
+ * gem options: texticle, pg_search
 
-###
+### Models:
+ * Question
+ * Vote
+ * Reply
+ * Tagging (as a concern?)
+ *
