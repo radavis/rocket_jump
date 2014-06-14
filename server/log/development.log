@@ -1,0 +1,41 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeQuestionBodyToText (20140614175816)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mALTER TABLE "questions" ALTER COLUMN "body" TYPE text[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "questions" ALTER "body" SET NOT NULL
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140614175816"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddTitleToQuestions (20140614182838)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "questions" ADD COLUMN "title" character varying(255) NOT NULL
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140614182838"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:54:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/rd/.gem/ruby/2.1.2/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hyperlinks" for 127.0.0.1 at 2014-06-14 16:54:14 -0400
+Processing by HyperlinksController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant HyperlinksController::Hyperlinks):
+  app/controllers/hyperlinks_controller.rb:3:in `index'
+
+
+  Rendered /Users/rd/.gem/ruby/2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/rd/.gem/ruby/2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/rd/.gem/ruby/2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.0ms)
+  Rendered /Users/rd/.gem/ruby/2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/hyperlinks" for 127.0.0.1 at 2014-06-14 16:54:31 -0400
+Processing by HyperlinksController#index as HTML
+  [1m[35mHyperlink Load (1.0ms)[0m  SELECT  "hyperlinks".* FROM "hyperlinks"  LIMIT 20
+  Rendered hyperlinks/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 79ms (Views: 70.6ms | ActiveRecord: 2.6ms)
