@@ -7,7 +7,12 @@ class QuestionSeeder
 
   def seed!
     CSV.foreach(@file_path, headers: true, header_converters: :symbol) do |row|
-      Question.find_or_create_by!(body: row.fields.join(' '))
+      title = row[:subject]
+      body = [:description, :searched, :problem].map { |attr| row[attr] }.join(' ')
+
+      puts "Creating Question \"#{title}\""
+
+      Question.find_or_create_by!(title: title, body: body)
     end
   end
 end
