@@ -1,4 +1,4 @@
-class CreateReply < ActiveRecord::Migration
+class CreateReplies < ActiveRecord::Migration
   def change
     create_table :replies do |t|
       t.text :body, null: false

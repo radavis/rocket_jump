@@ -1,4 +1,4 @@
-class CreateHyperlink < ActiveRecord::Migration
+class CreateHyperlinks < ActiveRecord::Migration
   def change
     create_table :hyperlinks do |t|
       t.string :url, null: false
