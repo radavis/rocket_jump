@@ -3,7 +3,7 @@ require 'rake'
 task :run do
   pids = [
     spawn("cd server && rails s"),
-    spawn("cd frontend && ember server"),
+    spawn("cd frontend && ember server --proxy=http://localhost:3000"),
   ]
 
   trap "INT" do

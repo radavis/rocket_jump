@@ -5,6 +5,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('questions', { path: '/' }, function() {
+  });
+  this.route('test');
 });
 
 export default Router;
