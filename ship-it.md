@@ -7,5 +7,10 @@
  * Map beginner questions to relevant web resources
  * Tag sites with keywords (javascript, ruby, html)
  * Search with no results -> put into a queue for someone to respond to with a relevant web site.
+ * Webcrawling of approved domains
 
 
+### Searching:
+  KIS - SQL ILIKE statements
+
+###
