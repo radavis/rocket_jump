@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RocketJump</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/rocket-jump.css">
+  </head>
+  <body>
+    <script>
+      window.RocketJumpENV = {{ENV}};
+      window.EmberENV = window.RocketJumpENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/rocket-jump.js"></script>
+    <script>
+      window.RocketJump = require('rocket-jump/app')['default'].create(RocketJumpENV.APP);
+    </script>
+  </body>
+</html>
