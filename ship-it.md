@@ -9,7 +9,7 @@
  * Search with no results -> put into a queue for someone to respond to with a relevant web site.
  * Webcrawling of approved domains
  * Approved Answer
- * API search
+ * API search for publishing results to Apollo Help Requests
  * User auth
  * Voting
 
@@ -18,8 +18,9 @@
  * gem options: texticle, pg_search
 
 ### Models:
- * Question
- * Reply
+ * ✓ Question
+ * ✓ Reply
+ * ✓ Hyperlink
  * Approved Answer
  * Tagging (as a concern?)
  * User
