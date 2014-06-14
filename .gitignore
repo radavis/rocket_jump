@@ -1,2 +1,15 @@
+/server/*.log
+=======
+# Ignore bundler config.
+/server/.bundle
 
-*.log
+# Ignore the default SQLite database.
+/server/db/*.sqlite3
+/server/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/server/log/*.log
+/server/tmp
+/server/config/database.yml
+
+/server/links/*.html
