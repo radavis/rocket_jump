@@ -1,6 +1,9 @@
-<form>
-  {{input name='query' value=query}}
+<form {{action 'search' on='submit'}}>
+  {{input name='search' value=searchField}}
+  {{input class='button' type='submit' value='Search'}}
 </form>
+
+<h1>{{query}}</h1>
 
 {{#each}}
   <h3>{{title}}</h3>
