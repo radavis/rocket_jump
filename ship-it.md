@@ -11,7 +11,7 @@
  * Voting
  * Approved Answer
  * API search
-
+ * User auth
 
 ### Searching:
  * KIS - SQL ILIKE statements
@@ -19,7 +19,7 @@
 
 ### Models:
  * Question
- * Vote
  * Reply
+ * Vote
  * Tagging (as a concern?)
- *
+ * User
