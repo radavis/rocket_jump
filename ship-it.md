@@ -22,6 +22,6 @@
  * ✓ Reply
  * ✓ Hyperlink
  * Approved Answer
- * Tagging (as a concern?)
+ * ✓ Tagging (as a concern?)
  * User
  * Vote
